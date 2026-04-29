@@ -1,0 +1,215 @@
+SectionA
+========
+Monday
+  8-9 AM: DAA - Teacher1
+  9-10 AM: Lab3 - Teacher7
+  10-11 AM: Microprocessors - Teacher4
+  11-12 PM: DAA - Teacher1
+  12-1 PM: Java - Teacher2
+  1-2 PM: Lab2 - Teacher6
+
+Tuesday
+  8-9 AM: Java - Teacher2
+  9-10 AM: Automata - Teacher3
+  10-11 AM: Lab4 - Teacher8
+  11-12 PM: Lab1 - Teacher5
+  12-1 PM: DAA - Teacher1
+  1-2 PM: Automata - Teacher3
+
+Wednesday
+  8-9 AM: Automata - Teacher3
+  9-10 AM: Lab3 - Teacher7
+  10-11 AM: Microprocessors - Teacher4
+  11-12 PM: Lab1 - Teacher5
+  12-1 PM: Java - Teacher2
+  1-2 PM: Lab2 - Teacher6
+
+Thursday
+  8-9 AM: DAA - Teacher1
+  9-10 AM: Free
+  10-11 AM: Lab4 - Teacher8
+  11-12 PM: Free
+  12-1 PM: Free
+  1-2 PM: Free
+
+Friday
+  8-9 AM: Java - Teacher2
+  9-10 AM: Free
+  10-11 AM: Free
+  11-12 PM: Free
+  12-1 PM: Free
+  1-2 PM: Free
+
+
+SectionB
+========
+Monday
+  8-9 AM: Java - Teacher2
+  9-10 AM: Java - Teacher2
+  10-11 AM: DAA - Teacher1
+  11-12 PM: Java - Teacher2
+  12-1 PM: Lab2 - Teacher6
+  1-2 PM: Automata - Teacher3
+
+Tuesday
+  8-9 AM: DAA - Teacher1
+  9-10 AM: Lab3 - Teacher7
+  10-11 AM: DAA - Teacher1
+  11-12 PM: Automata - Teacher3
+  12-1 PM: Microprocessors - Teacher4
+  1-2 PM: Java - Teacher2
+
+Wednesday
+  8-9 AM: DAA - Teacher1
+  9-10 AM: Lab2 - Teacher6
+  10-11 AM: Lab4 - Teacher8
+  11-12 PM: Free
+  12-1 PM: Free
+  1-2 PM: Free
+
+Thursday
+  8-9 AM: Automata - Teacher3
+  9-10 AM: Lab3 - Teacher7
+  10-11 AM: Free
+  11-12 PM: Lab1 - Teacher5
+  12-1 PM: Free
+  1-2 PM: Free
+
+Friday
+  8-9 AM: Microprocessors - Teacher4
+  9-10 AM: Free
+  10-11 AM: Lab4 - Teacher8
+  11-12 PM: Lab1 - Teacher5
+  12-1 PM: Free
+  1-2 PM: Free
+
+
+SectionC
+========
+Monday
+  8-9 AM: Automata - Teacher3
+  9-10 AM: DAA - Teacher1
+  10-11 AM: Java - Teacher2
+  11-12 PM: Lab2 - Teacher6
+  12-1 PM: DAA - Teacher1
+  1-2 PM: Lab4 - Teacher8
+
+Tuesday
+  8-9 AM: Microprocessors - Teacher4
+  9-10 AM: Lab1 - Teacher5
+  10-11 AM: Automata - Teacher3
+  11-12 PM: Lab3 - Teacher7
+  12-1 PM: Automata - Teacher3
+  1-2 PM: DAA - Teacher1
+
+Wednesday
+  8-9 AM: Java - Teacher2
+  9-10 AM: Microprocessors - Teacher4
+  10-11 AM: Lab1 - Teacher5
+  11-12 PM: Lab4 - Teacher8
+  12-1 PM: Lab2 - Teacher6
+  1-2 PM: Java - Teacher2
+
+Thursday
+  8-9 AM: Java - Teacher2
+  9-10 AM: Free
+  10-11 AM: Free
+  11-12 PM: Free
+  12-1 PM: Free
+  1-2 PM: Free
+
+Friday
+  8-9 AM: DAA - Teacher1
+  9-10 AM: Lab3 - Teacher7
+  10-11 AM: Free
+  11-12 PM: Free
+  12-1 PM: Free
+  1-2 PM: Free
+
+
+SectionD
+========
+Monday
+  8-9 AM: Lab3 - Teacher7
+  9-10 AM: Automata - Teacher3
+  10-11 AM: Lab4 - Teacher8
+  11-12 PM: Lab1 - Teacher5
+  12-1 PM: Lab3 - Teacher7
+  1-2 PM: DAA - Teacher1
+
+Tuesday
+  8-9 AM: Automata - Teacher3
+  9-10 AM: Java - Teacher2
+  10-11 AM: Java - Teacher2
+  11-12 PM: DAA - Teacher1
+  12-1 PM: Java - Teacher2
+  1-2 PM: Microprocessors - Teacher4
+
+Wednesday
+  8-9 AM: Microprocessors - Teacher4
+  9-10 AM: DAA - Teacher1
+  10-11 AM: DAA - Teacher1
+  11-12 PM: Java - Teacher2
+  12-1 PM: Lab1 - Teacher5
+  1-2 PM: Lab4 - Teacher8
+
+Thursday
+  8-9 AM: Lab2 - Teacher6
+  9-10 AM: Lab2 - Teacher6
+  10-11 AM: Free
+  11-12 PM: Free
+  12-1 PM: Free
+  1-2 PM: Free
+
+Friday
+  8-9 AM: Automata - Teacher3
+  9-10 AM: Free
+  10-11 AM: Free
+  11-12 PM: Free
+  12-1 PM: Free
+  1-2 PM: Free
+
+
+SectionE
+========
+Monday
+  8-9 AM: Microprocessors - Teacher4
+  9-10 AM: Lab4 - Teacher8
+  10-11 AM: Automata - Teacher3
+  11-12 PM: Lab3 - Teacher7
+  12-1 PM: Automata - Teacher3
+  1-2 PM: Java - Teacher2
+
+Tuesday
+  8-9 AM: Lab2 - Teacher6
+  9-10 AM: DAA - Teacher1
+  10-11 AM: Lab1 - Teacher5
+  11-12 PM: Java - Teacher2
+  12-1 PM: Lab3 - Teacher7
+  1-2 PM: Lab1 - Teacher5
+
+Wednesday
+  8-9 AM: Lab4 - Teacher8
+  9-10 AM: Java - Teacher2
+  10-11 AM: Automata - Teacher3
+  11-12 PM: DAA - Teacher1
+  12-1 PM: DAA - Teacher1
+  1-2 PM: DAA - Teacher1
+
+Thursday
+  8-9 AM: Microprocessors - Teacher4
+  9-10 AM: Java - Teacher2
+  10-11 AM: Free
+  11-12 PM: Free
+  12-1 PM: Free
+  1-2 PM: Free
+
+Friday
+  8-9 AM: Lab2 - Teacher6
+  9-10 AM: Free
+  10-11 AM: Free
+  11-12 PM: Free
+  12-1 PM: Free
+  1-2 PM: Free
+
+

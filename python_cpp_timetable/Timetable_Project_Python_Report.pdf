@@ -1,0 +1,212 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Length 3699 >>
+stream
+BT /F2 24 Tf 54.00 770.00 Td (Timetable Generator Project Report) Tj ET
+BT /F1 16 Tf 54.00 735.00 Td (Python Frontend and C++ DSA Backend) Tj ET
+BT /F1 12 Tf 54.00 690.00 Td (This report explains the timetable generator project in a simple presentation-) Tj ET
+BT /F1 12 Tf 54.00 673.00 Td (friendly way. It covers both sides of the project: the Python GUI layer and the) Tj ET
+BT /F1 12 Tf 54.00 656.00 Td (C++ backend layer. Python handles the application interface, while the backend) Tj ET
+BT /F1 12 Tf 54.00 639.00 Td (handles the core data structures and timetable generation logic.) Tj ET
+BT /F1 11 Tf 54.00 620.00 Td (Project files referred to: gui.py, main.cpp, scheduler.cpp, trie.cpp,) Tj ET
+BT /F1 11 Tf 54.00 605.00 Td (professors.json, and timetable.json.) Tj ET
+BT /F2 15 Tf 54.00 580.00 Td (Project Overview) Tj ET
+BT /F1 11 Tf 54.00 558.00 Td (The project is an institute timetable generator. It allows the user to manage professor) Tj ET
+BT /F1 11 Tf 54.00 543.00 Td (names, generate timetables for multiple sections, view each section, find the next) Tj ET
+BT /F1 11 Tf 54.00 528.00 Td (class, and export a readable timetable file.) Tj ET
+BT /F1 11 Tf 54.00 511.00 Td (The project has two layers. Python is the main application layer and provides the) Tj ET
+BT /F1 11 Tf 54.00 496.00 Td (complete GUI. The C++ layer is used as the DSA backend for Trie operations and priority-) Tj ET
+BT /F1 11 Tf 54.00 481.00 Td (queue based timetable generation.) Tj ET
+BT /F2 15 Tf 54.00 456.00 Td (My Main Work in Python) Tj ET
+BT /F1 10.5 Tf 63.00 434.00 Td (- Built the GUI in Python using Tkinter, including the professor panel, timetable) Tj ET
+BT /F1 10.5 Tf 63.00 420.00 Td (display, buttons, input boxes, dropdowns, status messages, and result list.) Tj ET
+BT /F1 10.5 Tf 63.00 404.00 Td (- Connected Python to the compiled C++ backend using subprocess so the GUI can run) Tj ET
+BT /F1 10.5 Tf 63.00 390.00 Td (commands like trie insert, trie search, trie all, and schedule.) Tj ET
+BT /F1 10.5 Tf 63.00 374.00 Td (- Used Python json handling to read backend responses and convert them into data) Tj ET
+BT /F1 10.5 Tf 63.00 360.00 Td (that can be shown in the GUI.) Tj ET
+BT /F1 10.5 Tf 63.00 344.00 Td (- Added validation for section count so wrong input does not break timetable) Tj ET
+BT /F1 10.5 Tf 63.00 330.00 Td (generation.) Tj ET
+BT /F1 10.5 Tf 63.00 314.00 Td (- Stored the latest timetable in Python so it can be reused for section switching,) Tj ET
+BT /F1 10.5 Tf 63.00 300.00 Td (next-class checking, and export.) Tj ET
+BT /F1 10.5 Tf 63.00 284.00 Td (- Implemented the next-class feature using Python datetime logic and the current) Tj ET
+BT /F1 10.5 Tf 63.00 270.00 Td (system time.) Tj ET
+BT /F1 10.5 Tf 63.00 254.00 Td (- Implemented timetable export from Python into a readable text file.) Tj ET
+BT /F2 15 Tf 54.00 230.00 Td (Why Python Is Important Here) Tj ET
+BT /F1 11 Tf 54.00 208.00 Td (Python makes the project user-friendly. Without the Python file, the project would only) Tj ET
+BT /F1 11 Tf 54.00 193.00 Td (run as command-line commands. The Python GUI turns the DSA backend into a proper) Tj ET
+BT /F1 11 Tf 54.00 178.00 Td (application where a user can click buttons, enter data, view tables, and understand the) Tj ET
+BT /F1 11 Tf 54.00 163.00 Td (output.) Tj ET
+BT /F1 11 Tf 54.00 146.00 Td (Python also acts as the controller of the project. It decides when to call the backend,) Tj ET
+BT /F1 11 Tf 54.00 131.00 Td (checks inputs, parses JSON output, updates the screen, and keeps the latest timetable) Tj ET
+BT /F1 11 Tf 54.00 116.00 Td (available for extra features.) Tj ET
+BT /F1 8 Tf 54.00 32.00 Td (Timetable Generator Project Report | Page 1) Tj ET
+endstream
+endobj
+2 0 obj
+<< /Length 4038 >>
+stream
+BT /F2 15 Tf 54.00 772.00 Td (Backend Work) Tj ET
+BT /F1 11 Tf 54.00 750.00 Td (The backend is written in C++ and works like the logic engine of the project. Python) Tj ET
+BT /F1 11 Tf 54.00 735.00 Td (sends commands to it, and the backend performs the data-structure operations, generates) Tj ET
+BT /F1 11 Tf 54.00 720.00 Td (timetable data, saves files, and returns JSON output.) Tj ET
+BT /F1 10.5 Tf 63.00 703.00 Td (- main.cpp handles command routing. It receives commands such as trie insert, trie) Tj ET
+BT /F1 10.5 Tf 63.00 689.00 Td (search, trie all, trie prefix, and schedule.) Tj ET
+BT /F1 10.5 Tf 63.00 673.00 Td (- trie.cpp and trie.h implement professor management using a Trie.) Tj ET
+BT /F1 10.5 Tf 63.00 657.00 Td (- scheduler.cpp and scheduler.h implement timetable generation using a Priority) Tj ET
+BT /F1 10.5 Tf 63.00 643.00 Td (Queue.) Tj ET
+BT /F1 10.5 Tf 63.00 627.00 Td (- professors.json stores saved professor names so the data remains available between) Tj ET
+BT /F1 10.5 Tf 63.00 613.00 Td (runs.) Tj ET
+BT /F1 10.5 Tf 63.00 597.00 Td (- timetable.json stores the generated timetable in a structured format.) Tj ET
+BT /F1 10.5 Tf 63.00 581.00 Td (- The backend prints JSON to stdout, and Python reads that output using subprocess.) Tj ET
+BT /F2 15 Tf 54.00 557.00 Td (Backend Modules) Tj ET
+BT /F1 10.5 Tf 63.00 535.00 Td (- main.cpp: entry point of the backend. It checks the command-line arguments and) Tj ET
+BT /F1 10.5 Tf 63.00 521.00 Td (calls the correct module.) Tj ET
+BT /F1 10.5 Tf 63.00 505.00 Td (- Trie module: inserts professor names, searches exact names, returns all saved) Tj ET
+BT /F1 10.5 Tf 63.00 491.00 Td (professors, and supports prefix-based search.) Tj ET
+BT /F1 10.5 Tf 63.00 475.00 Td (- Scheduler module: creates days, slots, subjects, sections, and final timetable) Tj ET
+BT /F1 10.5 Tf 63.00 461.00 Td (cells.) Tj ET
+BT /F1 10.5 Tf 63.00 445.00 Td (- JSON helpers: convert backend results into JSON text so Python can parse them) Tj ET
+BT /F1 10.5 Tf 63.00 431.00 Td (easily.) Tj ET
+BT /F2 15 Tf 54.00 407.00 Td (Trie Backend Explanation) Tj ET
+BT /F1 11 Tf 54.00 385.00 Td (The Trie is used for professor management. Each professor name is normalized by trimming) Tj ET
+BT /F1 11 Tf 54.00 370.00 Td (spaces and converting it to lowercase. Then every character is stored level by level in) Tj ET
+BT /F1 11 Tf 54.00 355.00 Td (the Trie. This makes searching efficient because the program follows one character path) Tj ET
+BT /F1 11 Tf 54.00 340.00 Td (instead of comparing the input with every full name manually.) Tj ET
+BT /F1 10.5 Tf 63.00 323.00 Td (- TrieNode stores a map from character to child node.) Tj ET
+BT /F1 10.5 Tf 63.00 307.00 Td (- isEnd marks the end of a complete professor name.) Tj ET
+BT /F1 10.5 Tf 63.00 291.00 Td (- insertProfessor creates missing character nodes and marks the last node as the) Tj ET
+BT /F1 10.5 Tf 63.00 277.00 Td (end.) Tj ET
+BT /F1 10.5 Tf 63.00 261.00 Td (- searchProfessor follows the character path and returns true only if the full name) Tj ET
+BT /F1 10.5 Tf 63.00 247.00 Td (exists.) Tj ET
+BT /F1 10.5 Tf 63.00 231.00 Td (- prefixSearch reaches the prefix node and then collects all matching names below) Tj ET
+BT /F1 10.5 Tf 63.00 217.00 Td (it.) Tj ET
+BT /F2 15 Tf 54.00 193.00 Td (Scheduler Backend Explanation) Tj ET
+BT /F1 11 Tf 54.00 171.00 Td (The scheduler creates a weekly timetable for each section. It has five working days and) Tj ET
+BT /F1 11 Tf 54.00 156.00 Td (six slots per day, so each section has 30 timetable cells. Subjects are added to a max) Tj ET
+BT /F1 11 Tf 54.00 141.00 Td (heap priority queue based on their credits. A subject with more credits has more) Tj ET
+BT /F1 11 Tf 54.00 126.00 Td (lectures and gets scheduled earlier.) Tj ET
+BT /F1 10.5 Tf 63.00 109.00 Td (- Each Subject stores name, credits, and teacher.) Tj ET
+BT /F1 10.5 Tf 63.00 93.00 Td (- Each Cell stores subject and teacher for one timetable slot.) Tj ET
+BT /F1 8 Tf 54.00 32.00 Td (Timetable Generator Project Report | Page 2) Tj ET
+endstream
+endobj
+3 0 obj
+<< /Length 4036 >>
+stream
+BT /F1 10.5 Tf 63.00 780.00 Td (- Each SectionTimetable stores the section name and its list of 30 cells.) Tj ET
+BT /F1 10.5 Tf 63.00 764.00 Td (- The priority queue stores remaining lectures and subject index.) Tj ET
+BT /F1 10.5 Tf 63.00 748.00 Td (- After one lecture is placed, the remaining count is reduced and pushed back if) Tj ET
+BT /F1 10.5 Tf 63.00 734.00 Td (more lectures are left.) Tj ET
+BT /F1 10.5 Tf 63.00 718.00 Td (- teacherBusy is a set that stores teacher_day_slot keys to avoid assigning the same) Tj ET
+BT /F1 10.5 Tf 63.00 704.00 Td (teacher to two sections at the same time.) Tj ET
+BT /F2 15 Tf 54.00 680.00 Td (Backend Flow) Tj ET
+BT /F1 10.5 Tf 63.00 658.00 Td (- Python runs main.exe with arguments.) Tj ET
+BT /F1 10.5 Tf 63.00 642.00 Td (- main.cpp reads the first argument and decides whether to run Trie logic or) Tj ET
+BT /F1 10.5 Tf 63.00 628.00 Td (scheduling logic.) Tj ET
+BT /F1 10.5 Tf 63.00 612.00 Td (- For Trie commands, saved professor names are loaded from professors.json and) Tj ET
+BT /F1 10.5 Tf 63.00 598.00 Td (inserted into a Trie.) Tj ET
+BT /F1 10.5 Tf 63.00 582.00 Td (- For schedule commands, the scheduler creates timetables for the requested number) Tj ET
+BT /F1 10.5 Tf 63.00 568.00 Td (of sections.) Tj ET
+BT /F1 10.5 Tf 63.00 552.00 Td (- The backend converts the result into JSON and prints it.) Tj ET
+BT /F1 10.5 Tf 63.00 536.00 Td (- Python captures the JSON output, parses it, and displays it in the GUI.) Tj ET
+BT /F2 15 Tf 54.00 512.00 Td (Python Concepts Used) Tj ET
+BT /F1 10.5 Tf 63.00 490.00 Td (- Tkinter classes and widgets: Tk, Frame, Label, Button, Entry, Listbox, OptionMenu,) Tj ET
+BT /F1 10.5 Tf 63.00 476.00 Td (and messagebox.) Tj ET
+BT /F1 10.5 Tf 63.00 460.00 Td (- Functions and classes: the TimetableApp class organizes the GUI and separates) Tj ET
+BT /F1 10.5 Tf 63.00 446.00 Td (features into methods.) Tj ET
+BT /F1 10.5 Tf 63.00 430.00 Td (- File paths: os.path is used to locate main.exe, timetable.json, and timetable.txt) Tj ET
+BT /F1 10.5 Tf 63.00 416.00 Td (inside the project folder.) Tj ET
+BT /F1 10.5 Tf 63.00 400.00 Td (- Subprocess: Python runs the C++ executable and captures its JSON output.) Tj ET
+BT /F1 10.5 Tf 63.00 384.00 Td (- JSON parsing: Python converts backend JSON text into dictionaries and lists.) Tj ET
+BT /F1 10.5 Tf 63.00 368.00 Td (- Date and time: datetime.now\(\) is used to find the upcoming class.) Tj ET
+BT /F1 10.5 Tf 63.00 352.00 Td (- Exception handling: try/except blocks show user-friendly errors instead of) Tj ET
+BT /F1 10.5 Tf 63.00 338.00 Td (crashing the GUI.) Tj ET
+BT /F2 15 Tf 54.00 314.00 Td (Data Structures Used) Tj ET
+BT /F1 10.5 Tf 63.00 292.00 Td (- Trie: used for professor management. Each character of a professor name is stored) Tj ET
+BT /F1 10.5 Tf 63.00 278.00 Td (in a tree-like structure. It supports insertion, exact search, and prefix search.) Tj ET
+BT /F1 10.5 Tf 63.00 262.00 Td (- Priority Queue / Max Heap: used in timetable generation. Subjects with more) Tj ET
+BT /F1 10.5 Tf 63.00 248.00 Td (remaining lectures get higher priority and are scheduled first.) Tj ET
+BT /F1 10.5 Tf 63.00 232.00 Td (- Vector / List: used to store days, slots, subjects, timetable cells, professor) Tj ET
+BT /F1 10.5 Tf 63.00 218.00 Td (names, and section timetables.) Tj ET
+BT /F1 10.5 Tf 63.00 202.00 Td (- Map: used inside each Trie node to map a character to the next child node.) Tj ET
+BT /F1 10.5 Tf 63.00 186.00 Td (- Set: used by the scheduler to track teacher-day-slot combinations and avoid) Tj ET
+BT /F1 10.5 Tf 63.00 172.00 Td (teacher clashes across sections.) Tj ET
+BT /F1 10.5 Tf 63.00 156.00 Td (- Dictionary / JSON object: used when Python receives timetable data with days,) Tj ET
+BT /F1 10.5 Tf 63.00 142.00 Td (slots, and sections.) Tj ET
+BT /F1 10.5 Tf 63.00 126.00 Td (- 2D timetable represented as a flat list: each section has 30 cells for 5 days x 6) Tj ET
+BT /F1 10.5 Tf 63.00 112.00 Td (slots.) Tj ET
+BT /F1 8 Tf 54.00 32.00 Td (Timetable Generator Project Report | Page 3) Tj ET
+endstream
+endobj
+4 0 obj
+<< /Length 2183 >>
+stream
+BT /F2 15 Tf 54.00 772.00 Td (How the Project Works) Tj ET
+BT /F1 10.5 Tf 63.00 750.00 Td (- The user opens the GUI by running python gui.py.) Tj ET
+BT /F1 10.5 Tf 63.00 734.00 Td (- For professor operations, Python sends commands to the C++ executable and displays) Tj ET
+BT /F1 10.5 Tf 63.00 720.00 Td (the JSON response.) Tj ET
+BT /F1 10.5 Tf 63.00 704.00 Td (- For timetable generation, Python sends the number of sections to the scheduler.) Tj ET
+BT /F1 10.5 Tf 63.00 688.00 Td (- The scheduler uses a priority queue to place subjects into free slots while) Tj ET
+BT /F1 10.5 Tf 63.00 674.00 Td (checking teacher conflicts.) Tj ET
+BT /F1 10.5 Tf 63.00 658.00 Td (- The backend returns JSON. Python reads it, stores it, and draws the selected) Tj ET
+BT /F1 10.5 Tf 63.00 644.00 Td (section as a timetable grid.) Tj ET
+BT /F1 10.5 Tf 63.00 628.00 Td (- The user can switch sections, check the next class, and export the timetable.) Tj ET
+BT /F2 15 Tf 54.00 604.00 Td (Example Explanation for Viva) Tj ET
+BT /F1 11 Tf 54.00 582.00 Td (My work includes both Python and backend integration. In Python, I created the Tkinter) Tj ET
+BT /F1 11 Tf 54.00 567.00 Td (GUI, handled user input, connected the GUI with the backend using subprocess, parsed) Tj ET
+BT /F1 11 Tf 54.00 552.00 Td (JSON output, displayed the timetable, and added features like next class and export. In) Tj ET
+BT /F1 11 Tf 54.00 537.00 Td (the backend, the project demonstrates Trie for professor search and Priority Queue for) Tj ET
+BT /F1 11 Tf 54.00 522.00 Td (scheduling subjects based on credits. The backend also checks teacher conflicts and) Tj ET
+BT /F1 11 Tf 54.00 507.00 Td (returns structured JSON to the Python GUI.) Tj ET
+BT /F2 15 Tf 54.00 482.00 Td (Conclusion) Tj ET
+BT /F1 11 Tf 54.00 460.00 Td (This project combines Python application development with important data structures.) Tj ET
+BT /F1 11 Tf 54.00 445.00 Td (Python makes the project interactive and easy to use, while Trie and Priority Queue show) Tj ET
+BT /F1 11 Tf 54.00 430.00 Td (the DSA logic behind professor management and timetable generation.) Tj ET
+BT /F1 8 Tf 54.00 32.00 Td (Timetable Generator Project Report | Page 4) Tj ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+7 0 obj
+<< /Type /Page /Parent 11 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 5 0 R /F2 6 0 R >> >> /Contents 1 0 R >>
+endobj
+8 0 obj
+<< /Type /Page /Parent 11 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 5 0 R /F2 6 0 R >> >> /Contents 2 0 R >>
+endobj
+9 0 obj
+<< /Type /Page /Parent 11 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 5 0 R /F2 6 0 R >> >> /Contents 3 0 R >>
+endobj
+10 0 obj
+<< /Type /Page /Parent 11 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 5 0 R /F2 6 0 R >> >> /Contents 4 0 R >>
+endobj
+11 0 obj
+<< /Type /Pages /Kids [7 0 R 8 0 R 9 0 R 10 0 R] /Count 4 >>
+endobj
+12 0 obj
+<< /Type /Catalog /Pages 11 0 R >>
+endobj
+xref
+0 13
+0000000000 65535 f 
+0000000015 00000 n 
+0000003765 00000 n 
+0000007854 00000 n 
+0000011941 00000 n 
+0000014175 00000 n 
+0000014245 00000 n 
+0000014320 00000 n 
+0000014457 00000 n 
+0000014594 00000 n 
+0000014731 00000 n 
+0000014869 00000 n 
+0000014946 00000 n 
+trailer
+<< /Size 13 /Root 12 0 R >>
+startxref
+14997
+%%EOF
